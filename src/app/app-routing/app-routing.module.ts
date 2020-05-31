@@ -8,6 +8,7 @@ import { InternalServerComponent } from '../error-pages/internal-server/internal
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'expense', loadChildren: () => import('./../expense/expense.module').then(m => m.ExpenseModule) },
+  { path: 'category', loadChildren: () => import('./../category/category.module').then(m => m.CategoryModule) },
   { path: '404', component: NotFoundComponent },
   { path: '500', component: InternalServerComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },

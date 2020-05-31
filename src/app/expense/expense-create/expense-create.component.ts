@@ -78,7 +78,6 @@ export class ExpenseCreateComponent implements OnInit {
   }
 
   public redirectToExpenseList() {
-    // this.router.navigate(['/expense/list']);
     this.location.back();
   }
 

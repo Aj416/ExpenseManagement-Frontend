@@ -27,7 +27,6 @@ export class ExpenseListComponent implements OnInit {
     let currentDate = new Date();
     let date: any = this.activeRoute.snapshot.queryParamMap.get('date') || this.datePipe.transform(currentDate, 'yyyy-MM-dd');
     let apiAddress: string = `api/Expenses?date=${date}`;
-    // let apiAddress: string = `api/Expenses`;
     this.repository.getData(apiAddress)
       .subscribe(res => {
         this.expenses = res as Expense[];
