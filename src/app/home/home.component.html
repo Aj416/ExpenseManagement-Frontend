@@ -1,0 +1,12 @@
+<p class="homeText">{{homeText}}</p>
+<br>
+<div class="row">
+    <div class="col-md-12">
+        Select month for which expense report required
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-3">
+        <input type="text" id="dateOfBirth" class="form-control" appDatepicker (change)="executeDatePicker($event)" readonly />
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Paymnent Category</th>
+                        <th>Paid Via</th>
+                        <th>Amount</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let expenseDetail of expenseDetails">
+                        <td>{{expenseDetail.date | date : 'dd/MM/yyyy'}}</td>
+                        <td>
+                            <select id="{{'category' + expenseDetail.expenseId }}"
+                                name="{{'category' + expenseDetail.expenseId }}" [(ngModel)]="expenseDetail.categoryId"
+                                disabled>
+                                <option *ngFor="let category of categories" [value]="category.id">
+                                    {{category.category}}
+                                </option>
+                            </select>
+                        </td>
+                        <td>
+                            <select id="{{'source' + expenseDetail.expenseId }}"
+                                name="{{'source' + expenseDetail.expenseId }}" [(ngModel)]="expenseDetail.sourceId"
+                                disabled>
+                                <option *ngFor="let expenseSource of expenseSources" [value]="expenseSource.id">
+                                    {{expenseSource.accountHolderName +" => " + expenseSource.bankName}}
+                                </option>
+                            </select>
+                        </td>
+                        <td>{{expenseDetail.amount | currency:'INR'}}</td>
+                        <td><button type="button" id="update" class="btn btn-success" (click)="redirectToUpdatePage(expenseDetail.expenseId)">Update</button></td>
+                        <td><button type="button" id="delete" class="btn btn-danger" (click)="redirectToDeletePage(expenseDetail.expenseId)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="offset-md-11 col-md-1">
+        <button type="button" class="btn btn-info" (click)="redirectBack()">Back</button>
+    </div>
+</div>
