@@ -1,12 +1,39 @@
 <p class="homeText">{{homeText}}</p>
-<br>
+<br><br>
 <div class="row">
     <div class="col-md-12">
-        Select month for which expense report required
+        <strong>Select month for which expense required</strong>
     </div>
 </div>
+<br>
 <div class="row">
     <div class="col-md-3">
-        <input type="text" id="dateOfBirth" class="form-control" appDatepicker (change)="executeDatePicker($event)" readonly />
+        <input type="text" id="dtExpense" class="form-control" appDatepicker (change)="executeDtExpense($event)"
+            readonly />
+    </div>
+</div>
+<br><br>
+<div class="row">
+    <div class="col-md-12">
+        <strong>Select month for which category wise report required</strong>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3">
+        <input type="text" id="dtCategory" class="form-control" appDatepicker (change)="executeDtCategory($event)"
+            readonly />
+    </div>
+</div>
+<br><br>
+<div class="row">
+    <div class="col-md-12">
+        <strong>Select month for which payer wise report required</strong>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-md-3">
+        <input type="text" id="dtPayer" class="form-control" appDatepicker (change)="executeDtPayer($event)" readonly />
     </div>
 </div>

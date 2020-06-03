@@ -16,8 +16,14 @@
         <a class="nav-link" [routerLink]="['/category/list']" routerLinkActive="active"
           [routerLinkActiveOptions]="{exact: true}">Payment Category </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Payment Source</a>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" routerLinkActive="active">Report</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" [routerLink]="['/expense/report-categorywise']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">Category Wise</a>
+          <a class="dropdown-item" [routerLink]="['/expense/report-payerwise']" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: false}">Payer Wise</a>
+        </div>
       </li>
     </ul>
   </div>

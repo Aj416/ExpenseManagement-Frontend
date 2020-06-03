@@ -9,6 +9,8 @@ import { ExpenseCreateComponent } from './expense-create/expense-create.componen
 import { ReactiveFormsModule } from '@angular/forms';
 import { ExpenseUpdateComponent } from './expense-update/expense-update.component';
 import { ExpenseDeleteComponent } from './expense-delete/expense-delete.component';
+import { ExpenseCategorywiseComponent } from './expense-categorywise/expense-categorywise.component';
+import { ExpensePayerwiseComponent } from './expense-payerwise/expense-payerwise.component';
 
 
 @NgModule({
@@ -18,6 +20,8 @@ import { ExpenseDeleteComponent } from './expense-delete/expense-delete.componen
     ExpenseCreateComponent,
     ExpenseUpdateComponent,
     ExpenseDeleteComponent,
+    ExpenseCategorywiseComponent,
+    ExpensePayerwiseComponent,
   ],
   imports: [
     CommonModule,

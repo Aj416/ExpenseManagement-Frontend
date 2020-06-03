@@ -6,13 +6,17 @@ import { ExpenseDetailsComponent } from '../expense/expense-details/expense-deta
 import { ExpenseCreateComponent } from '../expense/expense-create/expense-create.component';
 import { ExpenseUpdateComponent } from '../expense/expense-update/expense-update.component'
 import { ExpenseDeleteComponent } from '../expense/expense-delete/expense-delete.component'
+import { ExpenseCategorywiseComponent } from '../expense/expense-categorywise/expense-categorywise.component'
+import { ExpensePayerwiseComponent } from '../expense/expense-payerwise/expense-payerwise.component';
 
 const routes: Routes = [
   { path: 'list', component: ExpenseListComponent },
   { path: 'details/:date', component: ExpenseDetailsComponent },
   { path: 'create', component: ExpenseCreateComponent },
   { path: 'update/:id', component: ExpenseUpdateComponent },
-  { path: 'delete/:id', component: ExpenseDeleteComponent }
+  { path: 'delete/:id', component: ExpenseDeleteComponent },
+  { path: 'report-categorywise', component: ExpenseCategorywiseComponent },
+  { path: 'report-payerwise', component: ExpensePayerwiseComponent }
 ];
 
 @NgModule({

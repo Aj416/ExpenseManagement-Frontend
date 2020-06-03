@@ -9,7 +9,7 @@ import { DatePipe } from '@angular/common';
   selector: 'app-expense-list',
   templateUrl: './expense-list.component.html',
   styleUrls: ['./expense-list.component.css'],
-  providers: [DatePipe]
+  // providers: [DatePipe]
 })
 export class ExpenseListComponent implements OnInit {
   public expenses: Expense[];
